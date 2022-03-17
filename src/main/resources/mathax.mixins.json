@@ -38,6 +38,8 @@
     "ChatScreenMixin",
     "ChunkOcclusionDataBuilderMixin",
     "ChunkSkyLightProviderMixin",
+    "ClientChunkManagerAccessor",
+    "ClientChunkMapAccessor",
     "ClientConnectionAccessor",
     "ClientConnectionInitChannelMixin",
     "ClientConnectionMixin",

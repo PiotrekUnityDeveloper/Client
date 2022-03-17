@@ -167,7 +167,6 @@ public class DiscordRPC extends Module {
         else if (mc.currentScreen instanceof CreditsScreen) return "Reading credits";
         else if (mc.currentScreen instanceof AccountsScreen) return "In account manager";
         else if (mc.currentScreen instanceof AddCrackedAccountScreen) return "Adding cracked account";
-        else if (mc.currentScreen instanceof AddPremiumAccountScreen) return "Adding premium account";
         else if (mc.currentScreen instanceof AddAlteningAccountScreen) return "Adding The Altening account";
         else if (mc.currentScreen instanceof ProxiesScreen) return "Editing proxies";
         else if (mc.currentScreen instanceof ProxiesImportScreen) return "Importing proxies";

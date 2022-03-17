@@ -93,7 +93,7 @@ public class Ambience extends Module {
         .name("custom-grass-color")
         .description("Whether the grass color should be changed.")
         .defaultValue(false)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -102,7 +102,7 @@ public class Ambience extends Module {
         .description("The color of the grass.")
         .defaultValue(new SettingColor(105, 0, 0))
         .visible(customGrassColor::get)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -110,7 +110,7 @@ public class Ambience extends Module {
         .name("custom-foliage-color")
         .description("Whether the foliage color should be changed.")
         .defaultValue(false)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -119,7 +119,7 @@ public class Ambience extends Module {
         .description("The color of the foliage.")
         .defaultValue(new SettingColor(105, 0, 0))
         .visible(customFoliageColor::get)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -127,7 +127,7 @@ public class Ambience extends Module {
         .name("custom-water-color")
         .description("Whether the water color should be changed.")
         .defaultValue(false)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -136,7 +136,7 @@ public class Ambience extends Module {
         .description("The color of the water.")
         .defaultValue(new SettingColor(105, 0, 0))
         .visible(customWaterColor::get)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -144,7 +144,7 @@ public class Ambience extends Module {
         .name("custom-lava-color")
         .description("Whether the lava color should be changed.")
         .defaultValue(false)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -153,7 +153,7 @@ public class Ambience extends Module {
         .description("The color of the lava.")
         .defaultValue(new SettingColor(105, 0, 0))
         .visible(customLavaColor::get)
-        .onChanged(val -> mc.worldRenderer.reload())
+        .onChanged(val -> reload())
         .build()
     );
 
@@ -163,12 +163,16 @@ public class Ambience extends Module {
 
     @Override
     public void onActivate() {
-        if (mc.worldRenderer != null) mc.worldRenderer.reload();
+        reload();
     }
 
     @Override
     public void onDeactivate() {
-        if (mc.worldRenderer != null) mc.worldRenderer.reload();
+        reload();
+    }
+
+    private void reload() {
+        if (mc.worldRenderer != null && isActive()) mc.worldRenderer.reload();
     }
 
     public static class Custom extends SkyProperties {

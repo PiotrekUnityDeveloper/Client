@@ -87,6 +87,9 @@ dependencies {
     // Discord RPC
     library "com.github.Vatuu:discord-rpc:${project.discord_version}"
 
+    // Gson
+    library "com.google.code.gson:gson:${project.gson_version}"
+
     // JSON
     library "org.json:json:${project.json_version}"
 

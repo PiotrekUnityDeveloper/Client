@@ -289,8 +289,6 @@ public class ColorSettingScreen extends WindowScreen {
         boolean dragging;
         double lastMouseX, lastMouseY;
 
-        boolean calculateHandlePosOnLayout;
-
         double fixedHeight = -1;
 
         @Override
@@ -318,16 +316,6 @@ public class ColorSettingScreen extends WindowScreen {
             if (calculateNow) {
                 handleX = saturation * width;
                 handleY = (1 - value) * height;
-            } else calculateHandlePosOnLayout = true;
-        }
-
-        @Override
-        protected void onCalculateWidgetPositions() {
-            if (calculateHandlePosOnLayout) {
-                handleX = saturation * width;
-                handleY = (1 - value) * height;
-
-                calculateHandlePosOnLayout = false;
             }
         }
 
@@ -392,6 +380,9 @@ public class ColorSettingScreen extends WindowScreen {
             if (height != width) {
                 fixedHeight = width;
                 invalidate();
+
+                handleX = saturation * width;
+                handleY = (1 - value) * fixedHeight;
             }
 
             hueQuad.calculateColor();

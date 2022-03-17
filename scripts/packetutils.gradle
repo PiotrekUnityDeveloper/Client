@@ -128,13 +128,21 @@ task generatePacketUtils() {
 
         //     Write static block
         writer << "    static {\n"
-        s2cPackets.each { def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        S2C_PACKETS.put(${packet.replace("/", ".")}.class, \"$name\");\n" }
+        s2cPackets.each {
+            def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        S2C_PACKETS.put(${packet.replace("/", ".")}.class, \"$name\");\n"
+        }
         writer << "\n"
-        c2sPackets.each { def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        C2S_PACKETS.put(${packet.replace("/", ".")}.class, \"$name\");\n" }
+        c2sPackets.each {
+            def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        C2S_PACKETS.put(${packet.replace("/", ".")}.class, \"$name\");\n"
+        }
         writer << "\n\n"
-        s2cPackets.each { def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        S2C_PACKETS_R.put(\"$name\", ${packet.replace("/", ".")}.class);\n" }
+        s2cPackets.each {
+            def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        S2C_PACKETS_R.put(\"$name\", ${packet.replace("/", ".")}.class);\n"
+        }
         writer << "\n"
-        c2sPackets.each { def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        C2S_PACKETS_R.put(\"$name\", ${packet.replace("/", ".")}.class);\n" }
+        c2sPackets.each {
+            def packet = (String) it; def name = packet.substring(packet.lastIndexOf("/") + 1); writer << "        C2S_PACKETS_R.put(\"$name\", ${packet.replace("/", ".")}.class);\n"
+        }
         writer << "    }\n\n"
 
         //     Write getName method

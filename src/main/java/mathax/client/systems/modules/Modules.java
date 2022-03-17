@@ -512,6 +512,7 @@ public class Modules extends System<Modules> {
         add(new Tracers());
         add(new Trail());
         add(new Trajectories());
+        add(new TunnelESP());
         add(new UnfocusedCPU());
         add(new VoidESP());
         add(new WallHack());
