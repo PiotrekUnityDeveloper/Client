@@ -50,11 +50,11 @@ public class PremiumAccount extends Account<PremiumAccount> {
             cache.username = auth.getSelectedProfile().getName();
             return true;
         } catch (AuthenticationUnavailableException e) {
-            MatHax.LOG.error(MatHax.logPrefix + "Failed to contact the authentication server.");
+            MatHax.LOG.error("Failed to contact the authentication server.");
             return false;
         } catch (AuthenticationException e) {
-            if (e.getMessage().contains("Invalid username or password") || e.getMessage().contains("account migrated")) MatHax.LOG.error(MatHax.logPrefix + "Wrong password.");
-            else MatHax.LOG.error(MatHax.logPrefix + "Failed to contact the authentication server.");
+            if (e.getMessage().contains("Invalid username or password") || e.getMessage().contains("account migrated")) MatHax.LOG.error("Wrong password.");
+            else MatHax.LOG.error("Failed to contact the authentication server.");
 
             return false;
         }
