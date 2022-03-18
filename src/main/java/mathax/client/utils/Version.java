@@ -76,7 +76,7 @@ public class Version {
             String api = HTTP.get(MatHax.API_URL + "Version/metadata.json").sendString();
             if (api == null || !api.contains(getMinecraft().replace(".", "-"))) return null;
 
-            return new Version(JsonParser.parseString(api).getAsJsonObject().get(getMinecraft().replace(".", "-")).getAsString());
+            return new Version(new JsonParser().parse(api).getAsJsonObject().get(getMinecraft().replace(".", "-")).getAsString());
         }
 
         public static CheckResult checkLatest() {
