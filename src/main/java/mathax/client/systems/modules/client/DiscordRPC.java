@@ -87,7 +87,7 @@ public class DiscordRPC extends Module {
 
     @Override
     public void onActivate() {
-        MatHax.LOG.info("Enabling Discord Rich Presence...");
+        MatHax.LOG.info(MatHax.LOG_PREFIX + "Enabling Discord Rich Presence...");
 
         discord.discordInitialize(APP_ID, handlers, true, STEAM_ID);
         rpc.startTimestamp = System.currentTimeMillis() / 1000;
@@ -103,7 +103,7 @@ public class DiscordRPC extends Module {
         rpc.partyMax = 1;
         discord.discordUpdatePresence(rpc);
 
-        MatHax.LOG.info("Discord Rich Presence enabled!");
+        MatHax.LOG.info(MatHax.LOG_PREFIX + "Discord Rich Presence enabled!");
 
         new Thread(() -> {
             while (!Thread.currentThread().isInterrupted()) {
@@ -137,10 +137,10 @@ public class DiscordRPC extends Module {
     }
 
     public static void disable() {
-        MatHax.LOG.info("Disabling Discord Rich Presence...");
+        MatHax.LOG.info(MatHax.LOG_PREFIX + "Disabling Discord Rich Presence...");
         discord.discordClearPresence();
         discord.discordShutdown();
-        MatHax.LOG.info("Discord Rich Presence disabled!");
+        MatHax.LOG.info(MatHax.LOG_PREFIX + "Discord Rich Presence disabled!");
     }
 
     // TODO: Rewrite

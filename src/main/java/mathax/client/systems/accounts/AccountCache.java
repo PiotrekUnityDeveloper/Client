@@ -70,8 +70,8 @@ public class AccountCache implements ISerializable<AccountCache> {
             headTexture = new Texture(8, 8, head, Texture.Format.RGB, Texture.Filter.Nearest, Texture.Filter.Nearest);
 
             return true;
-        } catch (IOException e) {
-            MatHax.LOG.error("Failed to read skin url (" + url + ").");
+        } catch (IOException exception) {
+            MatHax.LOG.error(MatHax.LOG_PREFIX + "Failed to read skin url (" + url + ").");
             return false;
         }
     }
