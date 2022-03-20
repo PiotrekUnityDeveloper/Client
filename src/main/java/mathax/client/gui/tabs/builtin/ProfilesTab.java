@@ -194,16 +194,16 @@ public class ProfilesTab extends Tab {
             modulesBool.action = () -> newProfile.modules = modulesBool.checked;
             table.row();
 
-            // WaypointsModule
-            table.add(theme.label("Waypoints Module:"));
-            WCheckbox waypointsBool = table.add(theme.checkbox(ogProfile.waypoints)).widget();
-            waypointsBool.action = () -> newProfile.waypoints = waypointsBool.checked;
-            table.row();
-
             // HUD
             table.add(theme.label("HUD:"));
             WCheckbox hudBool = table.add(theme.checkbox(ogProfile.hud)).widget();
             hudBool.action = () -> newProfile.hud = hudBool.checked;
+            table.row();
+
+            // Waypoints Module
+            table.add(theme.label("Waypoints Module:"));
+            WCheckbox waypointsBool = table.add(theme.checkbox(ogProfile.waypoints)).widget();
+            waypointsBool.action = () -> newProfile.waypoints = waypointsBool.checked;
             table.row();
 
             table.add(theme.horizontalSeparator()).expandX();
