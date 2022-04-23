@@ -560,6 +560,7 @@ public class Modules extends System<Modules> {
         add(new SpawnProofer());
         add(new Timer());
         add(new VeinMiner());
+        add(new AutoTower()); //added by Piotrek4 :D
     }
 
     private void initChat() {

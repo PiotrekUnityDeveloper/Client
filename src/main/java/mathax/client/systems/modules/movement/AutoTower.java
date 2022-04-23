@@ -51,6 +51,11 @@ import net.minecraft.block.FallingBlock;
 //import net.minecraft.item.Items;
 import net.minecraft.client.sound.PositionedSoundInstance;
 
+/*/ ---- INFO -------------------------------------------------------------------------------------------------------------/*/
+/*/ this module has been epicly skidded from this repo:                                                                    /*/
+/*/ https://github.com/cally72jhb/vector-addon/blob/main/src/main/java/cally72jhb/addon/system/modules/movement/Tower.java /*/
+/*/ -----------------------------------------------------------------------------------------------------------------------/*/
+
 public class AutoTower extends Module {
 	private final SettingGroup sgGeneral = settings.getDefaultGroup();
 	private final SettingGroup sgJump = settings.createGroup("Packet Jump");
