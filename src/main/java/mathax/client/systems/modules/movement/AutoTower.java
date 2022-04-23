@@ -52,7 +52,7 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.client.sound.PositionedSoundInstance;
 
 /*/ ---- INFO -------------------------------------------------------------------------------------------------------------/*/
-/*/ this module has been epicly skidded from this repo:                                                                    /*/
+/*/ this module has been epicly skidded from here:                                                                    /*/
 /*/ https://github.com/cally72jhb/vector-addon/blob/main/src/main/java/cally72jhb/addon/system/modules/movement/Tower.java /*/
 /*/ -----------------------------------------------------------------------------------------------------------------------/*/
 
