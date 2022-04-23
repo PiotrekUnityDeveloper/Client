@@ -247,7 +247,7 @@ public class AutoTower extends Module {
     private int timer;
 
     public AutoTower() {
-        super(Categories.Movement, Items.BARRIER, "air-jump", "Lets you jump in the air.");
+        super(Categories.Movement, Items.DIRT, "auto-tower", "builds a tower");
     }
 
     @Override
