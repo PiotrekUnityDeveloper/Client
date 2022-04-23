@@ -222,7 +222,7 @@ public class AutoMLG extends Module {
 
     private boolean rightClickBlock(BlockPos pos) {
         Vec3d hitVec = Vec3d.ofCenter(pos).add(Vec3d.of(Direction.UP.getVector()).multiply(0.5));
-        Rotation rotation = PlayerUtils.getNeededRotations(hitVec);
+        baritone.api.utils.Rotation rotation = PlayerUtils.getNeededRotations(hitVec);
 
         mc.player.setYaw(rotation.getYaw());
         mc.player.setPitch(rotation.getPitch());
