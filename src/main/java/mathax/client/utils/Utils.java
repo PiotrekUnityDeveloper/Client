@@ -79,7 +79,7 @@ public class Utils {
         }
     }
 
-    public static boolean isDeveloper(String uuid) {
+    public static boolean isDeveloper(String uuid) { //i was here
         uuid = uuid.replace("-", "");
         return MatHax.getDeveloperUUIDs().contains(uuid);
     }
