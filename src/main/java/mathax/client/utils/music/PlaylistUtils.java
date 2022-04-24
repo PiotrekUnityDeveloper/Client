@@ -32,6 +32,7 @@ public class PlaylistUtils {
             playlists.put("https://music.youtube.com/playlist?list=PL2vYabJDBczNGOYVGXMIlH4G_wcYje5Oi", null); // Rap Nation
             playlists.put("https://music.youtube.com/playlist?list=PLC1og_v3eb4h1MA88R3JHcPoLUpCRtxiZ", null); // Trap Nation
             playlists.put("https://music.youtube.com/playlist?list=PLU_bQfSFrM2PemIeyVUSjZjJhm6G7auOY", null); // Trap City
+            playlists.put("https://www.youtube.com/playlist?list=PL-gGMa2SsfJePjsgqUlabo9X6t0MvA0SQ", null); // Piotrek4's soundtracks
             save();
             playlists.clear();
         }
